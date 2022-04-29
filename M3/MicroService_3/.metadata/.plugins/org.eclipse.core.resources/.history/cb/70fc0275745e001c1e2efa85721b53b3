@@ -1,0 +1,27 @@
+version: '3'
+services:
+   m3_image:
+      ports:
+         - "8084:8084"
+      network_mode: bridge
+      build:
+         context: .
+         args:
+           JAR_FILE: /target/micro-service-three.jar
+      container_name: m3_container
+      depends_on:
+         - cassandradb
+      restart: always
+   cassandradb:
+      image: cassandra
+      container_name: cassandradb
+      network_mode: bridge
+      ports:
+         - "9042:9042"
+      environment:
+         - CASSANDRA_HOST=cassandradb
+         - CASSANDRA_RPC_ADDRESS=0.0.0.0  
+      
+    
+
+      

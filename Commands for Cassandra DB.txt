@@ -1,0 +1,20 @@
+ports - 
+M1 - 8082
+M2 - 8080
+M3 - 8084
+
+
+Cassandra Commands for creating DB and Table -
+
+CREATE KEYSPACE cassdb WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+
+CREATE TABLE user(
+vin text ,
+verified text,
+speed int,
+alert text,
+timestamp text,
+PRIMARY KEY(vin,timestamp)
+)
+WITH CLUSTERING ORDER BY (timestamp asc);
+

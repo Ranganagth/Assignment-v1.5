@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vehical informatin</title>
+    <link rel="stylesheet" href="speed.css" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <!-- <nav>
+      <h1 class="logo">VIN | SPEED</h1>
+      <ul>
+        <li><a href="./index.html" class="link">HOME</a></li>
+        <li><a href="./speed.html" class="link">M1</a></li>
+        <li><a href="./vin.html" class="link">M2</a></li>
+        <li><a href="#" class="link btn" onclick="logout()">LOGOUT</a></li>
+      </ul>
+    </nav> -->
+    <!-- partial:index.partial.html -->
+    <div class="ManualEntry">
+      <!-- <form id="myForm" method="POST" action = "http://localhost:8880/my/pro"> -->
+
+      <h2>Device registration information</h2>
+      <input name="device_id" placeholder="device_id" type="text" id="device_id" />
+      <br />
+      <input name="device_name" placeholder="device_name" type="text" id="device_name" />
+      <br />
+      <input name="device_serial_no" placeholder="device_serial_no" type="text" id="device_serial_no" />
+      <br />
+      <input name="device_type_id" placeholder="device_type_id" type="text" id="device_type_id" />
+      <br />
+      <input name="status" placeholder="status" type="text" id="status" />
+      <br />
+      <input name="prototype_id" placeholder="prototype_id" type="text" id="prototype_id" />
+      <br />
+      <input name="location_Id" placeholder="location_Id" type="text" id="location_Id" />
+      <br />
+      <input name="created_by" placeholder="created_by" type="text" id="created_by" />
+      <br />
+      <input name="created_timestamp" placeholder="created_timestamp" type="text" id="created_timestamp" />
+      <br />
+      <input name="updated_timestamp" placeholder="updated_timestamp" type="text" id="updated_timestamp" />
+      <br />
+      <input name="account_id" placeholder="account_id" type="text" id="account_id" />
+      <br />
+      <input name="device_state" placeholder="device_state" type="text" id="device_state" />
+      <br />
+      <input name="user_device_type " placeholder="user_device_type" type="text" id="user_device_type" />
+      <br />
+      <input name="tcu_serial_number" placeholder="tcu_serial_number" type="text" id="tcu_serial_number" />
+      <br />
+      <input name="imei" placeholder="imei" type="text" id="imei" />
+      <br />
+      <input name="iccid" placeholder="iccid" type="text" id="iccid" />
+      <br />
+      <!-- <input
+        name="freq"
+        placeholder="Frequency (in sec)"
+        type="number"
+        id="freq"
+      />
+      <br />
+      <input
+        name="same"
+        placeholder="Should the Vin be same?"
+        type="text"
+        id="same"
+      /> -->
+
+      <br />
+      <!-- <button type="submit">Submit</button> -->
+      <button type="submit" onclick="checking()">Submit</button>
+      <br />
+    </div>
+    <!-- <script>
+      const url = "http://localhost:8880/my/pro";
+      const formEl = document.getElementById("myfFrm");
+      formEl.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(formEl);
+        const formDataSerialized = Object.fromEntries(formData);
+        console.log(formDataSerialized);
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+        } catch (e) {
+          console.error(e);
+          alert("there is an error");
+        }
+      });
+    </script> -->
+    <script src="insert.js"></script>
+  </body>
+</html>
